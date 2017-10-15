@@ -1,0 +1,71 @@
+{
+    "name": "leptonModule",
+    "version": "0.0.1",
+    "description": "Partícula elemental de TEST para el Trabajo con Microservicios",
+    "author": "carmelohuesca",
+    "main": "./lib/index.js",
+    "types": "./index.d.ts",
+    "files": ["lib", "src", "index.d.ts"],
+    "directories": {
+        "src": "src",
+        "lib": "lib",
+        "test": "test"
+    },
+    "repository": {
+        "type": "git",
+        "url": "http://git.absapp.net/r/argo2/front/components/lepton.git"
+    },
+    "keywords": [
+        "components",
+        "base",
+        "gnerator",
+        "lepton",
+        "generator-aqua",
+        "repository"
+    ],
+    "license": "SEE LICENSE IN <LICENSE>",
+    "scripts": {
+        "prestart": "npm run typings && npm run build",
+        "start": "npm run tdd",
+        "prepublish": "npm run build",
+        "prebuild": "npm run test && tsc",
+        "typings": "typings install",
+        "build": "webpack",
+        "tsdoc": "jsdoc ./src -r -c ./tsdoc.json  -d ./docs",
+        "tsdoc-open": "jsdoc ./src -r -c ./tsdoc.json  -d ./docs && (open ./docs/index.html || start ./docs/index.html)",
+        "tsdoc-mac": "jsdoc ./src -r -c ./tsdoc.json  -d ./docs && open ./docs/index.html",
+        "tsdoc-win": "jsdoc ./src -r -c ./tsdoc.json  -d ./docs && start ./docs/index.html",
+        "pretest": "npm run typings",
+        "server": "webpack-dev-server --content-base lib/",
+        "predev": "npm run server",
+        "dev": "webpack-dev-server --progress --colors",
+        "test": "karma start --single-run",
+        "tdd": "karma start  --reporters=kjhtml"
+    },
+    "devDependencies": {
+        "codelyzer": "3.2.1",
+        "jasmine": "2.8.0",
+        "jasmine-core": "2.8.0",
+        "jsdoc": "3.5.5",
+        "karma": "1.7.1",
+        "karma-chrome-launcher": "2.2.0",
+        "karma-coverage": "1.1.1",
+        "karma-firefox-launcher": "1.0.1",
+        "karma-ie-launcher": "1.0.0",
+        "karma-jasmine": "1.1.0",
+        "karma-jasmine-html-reporter": "0.2.2",
+        "karma-opera-launcher": "1.0.0",
+        "karma-phantomjs-launcher": "1.0.4",
+        "karma-safari-launcher": "1.0.0",
+        "karma-typescript": "3.0.7",
+        "source-map-loader": "0.2.2",
+        "ts-loader": "2.3.7",
+        "tsdoc": "0.0.4",
+        "tslint": "5.7.0",
+        "typedoc": "0.9.0",
+        "typescript": "2.5.3",
+        "typings": "2.1.1",
+        "webpack": "3.7.1",
+        "webpack-dev-server": "2.9.1"
+    }
+}

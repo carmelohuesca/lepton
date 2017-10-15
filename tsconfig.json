@@ -1,0 +1,27 @@
+{
+    "compilerOptions": {
+        "outDir": "./lib",
+        "allowJs": false,
+        "module": "commonjs",
+        "noImplicitAny": true,
+        "removeComments": true,
+        "preserveConstEnums": true,
+        "sourceMap": true,
+        "declaration": false,
+        "diagnostics": true,
+        "target": "es5"
+    },
+    "files": [
+        "./src/index.ts",
+        "./typings/index.d.ts"
+    ],
+    "include": [
+        "./src/**/*",
+        "./typings/**/*"
+    ],
+    "compileOnSave": true,
+    "exclude": [
+        "node_modules/*",
+        "**/*-aot.ts"
+    ]
+}

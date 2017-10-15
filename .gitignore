@@ -1,0 +1,14 @@
+# node_modules
+node_modules
+# coverage
+coverage
+# lib
+lib
+# docs
+docs
+# environment
+.env
+# bundle
+bundle
+# typings
+typings
